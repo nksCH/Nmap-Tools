@@ -21,6 +21,7 @@ if __name__=="__main__":
 
 	phantomjs = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true'])
 	browser = phantomjs
+	browser.set_window_size(1024, 768)
 	url =  ""+str(options.prefix)+"://"+str(options.host_ip)+":"+str(options.port)+""
 	print url
 	browser.get(url)
